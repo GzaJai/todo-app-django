@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content1 %}
+<div>
+    <h3>Actualizar ToDo</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+        <a href="{% url 'todo_details' todo.id %}">Cancelar</a>
+        <a href="{% url 'delete_todo' todo.id %}">Eliminar</a>
+    </form>
+</div>
+{% endblock %}

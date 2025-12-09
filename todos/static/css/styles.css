@@ -1,0 +1,101 @@
+body {
+    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: tan;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    width: 100%;
+    padding: 0 0 0 5rem;
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+nav li {
+    list-style: none;
+    font-weight: 500;
+    color: black;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: .5rem;
+    transition: 200ms;
+}
+
+a:hover {
+    padding: .5rem;
+    border-radius: .5rem;
+    color: white;
+    background-color: darkcyan;
+}
+
+section {
+    padding: 4rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    border: .2px solid black;
+    border-radius: .5rem;
+}
+
+.todo-display-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.todo-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0 1rem 0;
+}
+
+.button-container a {
+    border-radius: .5rem;
+}
+
+.edit-button {
+    background-color: greenyellow;
+}
+
+.return-button {
+    background-color: #f3f3f3;
+}

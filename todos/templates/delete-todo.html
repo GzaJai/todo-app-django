@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content1 %}
+<div>
+    <h3>¿Seguro quieres eliminar el ToDo?</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">ELIMINAR</button>
+        <a href="{% url 'todo_details' todo.id %}">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

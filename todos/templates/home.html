@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content1 %}
+    <h2>
+        ToDos
+    </h2>
+
+    <ul class="todo-container">
+    {% for todo in todos %}
+        <li class="todo-item">
+            <a href="{% url 'todo_details' todo.id %}">
+                <p>{{ todo.title }}</p>
+                <p>Estado: {{ todo.get_status_display }}</p>
+            </a>
+        </li>
+    {% empty %}    
+        <li>No hay tareas</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
