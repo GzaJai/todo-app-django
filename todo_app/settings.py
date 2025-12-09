@@ -9,7 +9,7 @@ if not SECRET_KEY:
 
 DEBUG = False  # ponelo en False en producción
 
-ALLOWED_HOSTS = ["todo-app-django-asa2.onrender.com"]
+ALLOWED_HOSTS = ["todo-app-django-asa2.onrender.com", "todo-app.gonzalojaime.codes"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
