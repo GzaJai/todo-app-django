@@ -38,6 +38,23 @@ nav li {
     font-size: 1rem;
 }
 
+.login-button {
+    background-color: darkcyan;
+}
+
+.login-button:hover {
+    background-color: cyan;
+    color: black;
+}
+
+.logout-button {
+    background-color: #ff5555;
+}
+
+.logout-button:hover {
+    background-color: #ff0000;
+}
+
 a {
     text-decoration: none;
     color: black;
