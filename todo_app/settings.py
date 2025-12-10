@@ -3,13 +3,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
-if not SECRET_KEY:
-    raise ValueError("SECRET_KEY no configurada en las variables de entorno")
+SECRET_KEY = 'django-insecure-=nvnzw1)s4goq3%d@dja=)ljf$-a^ykjou77hga)&zpv4!!vtt'
 
-DEBUG = False  # ponelo en False en producción
+DEBUG = True  # ponelo en False en producción
 
-ALLOWED_HOSTS = ["todo-app-django-asa2.onrender.com", "todo-app.gonzalojaime.codes"]
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
