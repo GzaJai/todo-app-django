@@ -1,6 +1,30 @@
-<form method="POST">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="usuario">
-    <input type="password" name="password" placeholder="contraseña">
-    <button type="submit">Ingresar</button>
-</form>
+{% extends 'auth-layout.html' %}
+
+{% block page_title %}
+    <title>Login ToDo</title>
+{% endblock %}
+
+{% block auth_form %}
+    <header>
+        <h1>Ingresa</h1>
+    </header>
+
+    <div class="auth-form-container">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-container">
+                <label for="username">Usuario</label>
+                <input type="text" name="username" placeholder="juanperez">
+            </div>
+            <div class="input-container">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" placeholder="••••••••">
+            </div>
+            <div class="button-container">
+                <button type="submit">Ingresar</button>
+            </div>
+        </form>
+    </div>
+    <p>¿No tenes cuenta?</p>
+    <a href="{% url 'signup' %}">Crea la tuya</a>
+{% endblock %}
