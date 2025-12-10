@@ -9,20 +9,20 @@
 </head>
 <body>
     <header>
-        <a class="home-button">
+        <a class="home-button" href="{% url 'home' %}">
             ToDo APP
         </a>
         <nav>
             {% if not user.is_authenticated %}
             <ul>
                 <li>
-                    <a href="{% url 'login' %}">Inciar Sesión</a>
+                    <a class="login-button" href="{% url 'login' %}">Inciar Sesión</a>
                 </li>
             </ul>
             {% else %}
             <ul>
                 <li>
-                    <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                    <a class="logout-button" href="{% url 'logout' %}">Cerrar Sesión</a>
                 </li>
             </ul>
             {% endif %}
