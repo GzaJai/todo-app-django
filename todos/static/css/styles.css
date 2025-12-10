@@ -7,43 +7,63 @@ body {
 header {
     width: 100%;
     background-color: tan;
-    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
+    justify-content: center;
+    padding: .5rem 1rem;
+
 }
 
-h1 {
-    width: 100%;
-    padding: 0 0 0 5rem;
-    
+header .home-button {
+    width: 40%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+    text-decoration: none !important;
+    color: inherit !important;
+    background: none !important;
+    padding: 0 0 0 2rem !important;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: right;
+    width: 40%;
 }
 
 nav li {
     list-style: none;
     font-weight: 500;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.login-button {
+    background-color: darkcyan;
+}
+
+.login-button:hover {
+    background-color: cyan;
+    color: black;
+}
+
+.logout-button {
+    background-color: #ff5555;
+}
+
+.logout-button:hover {
+    background-color: #ff0000;
 }
 
 a {
     text-decoration: none;
     color: black;
-    padding: .5rem;
     transition: 200ms;
+    padding: .5rem;
+    border-radius: .5rem;
 }
 
 a:hover {
-    padding: .5rem;
-    border-radius: .5rem;
     color: white;
     background-color: darkcyan;
 }
@@ -55,30 +75,69 @@ section {
     align-items: center;
 }
 
-.todo-container {
+.add-todo {
+    font-weight: 600;
+    background-color: darkcyan;
+    color: white;
+    padding: 1rem;
+}
+
+.add-todo:hover {
+    background-color: cyan;
+    color: black;
+}
+
+.todo-section {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
+    justify-content: center;
+}
+
+.todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 20px;
+
+    width: 100%;
+    max-width: 600px;  /* evita que se estire demasiado */
 }
 
 .todo-item {
-    display: flex;
-    flex-direction: row;
-    border: .2px solid black;
-    border-radius: .5rem;
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.todo-display-container {
+a .todo-item {
+    color: black !important;
+}
+
+.todo-list p {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.todo-display {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: .5rem;
+    background: #f8f8f8;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .todo-title {
     font-size: 1.2rem;
     font-weight: 600;
+    padding: 0 0 1rem;
 }
 
 .button-container {
@@ -98,4 +157,77 @@ section {
 
 .return-button {
     background-color: #f3f3f3;
+}
+
+.form-container {
+    width: 17rem;
+    background-color: tan;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: .2rem;
+}
+
+.input-container label {
+    color: black;
+}
+
+.input-container input,
+.input-container select,
+.input-container textarea { 
+    border: none;
+    border-radius: .5rem;
+    padding: .3rem;
+    resize: none;
+}
+
+.button-container {
+    display: flex;
+}
+
+.save-button {
+    background-color: #50aa50;
+    font-size: 1rem;
+    color: black;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .3rem;
+    transition: 200ms;
+}
+
+.save-button:hover {
+    cursor: pointer;
+    background-color: limegreen;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #fc7171;
+    font-size: 1rem;
+    color: black;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .3rem;
+}
+
+.cancel-button:hover {
+    background-color: #ff0000;
+}
+
+.delete-button:hover {
+    background-color: #ff0000;
 }

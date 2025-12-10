@@ -1,10 +1,28 @@
 {% extends 'layout.html' %}
 
 {% block content1 %}
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Crear</button>
-    <a href="{% url 'home' %}">Cancelar</a>
-</form>
+<div class="form-container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="input-container">
+            <label for="title">Titulo</label>
+            {{ form.title }}
+            {{ form.title.errors }}
+        </div>
+        <div class="input-container">
+            <label for="title">Descripción</label>
+            {{ form.description }}
+            {{ form.description.errors }}
+        </div>
+        <div class="input-container">
+            <label for="title">Estado</label>
+            {{ form.status }}
+            {{ form.status.errors }}
+        </div>
+        <div class="button-container">
+            <a class="cancel-button" href="{% url 'home' %}">Cancelar</a>
+            <button class="save-button" type="submit">Crear</button>
+        </div>
+    </form>
+</div>
 {% endblock %}

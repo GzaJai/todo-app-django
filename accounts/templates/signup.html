@@ -1,5 +1,58 @@
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Registrar</button>
-</form>
+{% extends 'auth-layout.html' %}
+
+{% block page_title %}
+    <title>SignUp ToDo</title>
+{% endblock %}
+
+{% block auth_form %}
+    <header>
+        <h1>Registrate</h1>
+    </header>
+
+    <div class="auth-form-container">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-container">
+                <label for="username">Usuario</label>
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+            <div class="input-container">
+                <label for="email">Email</label>
+                {{ form.email }}
+                {{ form.emails.errors }}
+            </div>
+            <div class="input-container">
+                <label for="first_name">Nombre</label>
+                {{ form.first_name }}
+                {{ form.first_name.errors }}
+            </div>
+            <div class="input-container">
+                <label for="last_name">Apellido</label>
+                {{ form.last_name }}
+                {{ form.last_name.errors }}
+            </div>
+            <div class="input-container">
+                <label for="password1">Contraseña</label>
+                {{ form.password1 }}
+            </div>
+            <div class="errors-display">
+                {% for error in form.password1.errors %}
+                <p class="error">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <div class="input-container">
+                <label for="password2">Confirmar contraseña</label>
+                {{ form.password2 }}
+            </div>
+            <div class="errors-display">
+                {% for error in form.password2.errors %}
+                <p class="error">{{ error }}</p>
+                {% endfor %}
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <p>¿Ya tenes cuenta?</p>
+    <a href="{% url 'login' %}">Ingresa acá</a>
+{% endblock %}

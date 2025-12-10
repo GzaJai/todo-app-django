@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/accounts-styles.css' %}">
+    {% block page_title %}
+    {% endblock %}
+</head>
+<body>
+    {% block auth_form %}
+    {% endblock %}
+</body>
+</html>

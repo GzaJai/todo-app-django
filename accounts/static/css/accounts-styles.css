@@ -1,0 +1,82 @@
+body {
+    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0 0 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a, button {
+    background-color: darkcyan;
+    text-decoration: none;
+    color: white;
+    padding: .5rem;
+    transition: 200ms;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+a:hover, button:hover {
+    color: black;
+    background-color: cyan;
+    cursor: pointer;
+}
+
+.auth-form-container {
+    width: 17rem;
+    background-color: tan;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.auth-form-container .errors-display {
+    display: flex;
+    flex-direction: column;
+    color: red;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.input-container label {
+    color: black;
+}
+
+.input-container input { 
+    border: none;
+    border-radius: .5rem;
+    padding: .3rem;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+.button-container a {
+    border-radius: .5rem;
+}
