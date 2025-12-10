@@ -1,17 +1,23 @@
 {% extends 'layout.html' %}
 
 {% block content1 %}
-<div class="todo-display-container">
-    <p class="todo-title">{{ todo.title }}</p>
-    <p>Estado: {{ todo.get_status_display }}</p>
-    <p>{{ todo.description }}</p>
-    <div class="button-container">
-        <a class="edit-button" href="{% url 'edit_todo' todo.id %}">
-            Editar
-        </a>
-        <a class="return-button" href="{% url 'home' %}">
-            Volver
-        </a>
+<section class="todo-section">
+    <div class="todo-display">
+        <div class="todo-display-container">
+            <p class="todo-title">{{ todo.title }}</p>
+            <p>Estado: {{ todo.get_status_display }}</p>
+            <hr />
+            <p>{{ todo.description }}</p>
+
+            <div class="button-container">
+                <a class="edit-button" href="{% url 'edit_todo' todo.id %}">
+                    Editar
+                </a>
+                <a class="return-button" href="{% url 'home' %}">
+                    Volver
+                </a>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 {% endblock %}
