@@ -1,21 +1,25 @@
 {% extends 'layout.html' %}
 
 {% block content1 %}
-    <h2>
-        ToDos
-    </h2>
+    <a class="add-todo" href="{% url 'create_todo' %}">
+        Agregar Tarea
+    </a>
 
-    <ul class="todo-container">
-    {% for todo in todos %}
-        <li class="todo-item">
-            <a href="{% url 'todo_details' todo.id %}">
-                <p>{{ todo.title }}</p>
-                <p>Estado: {{ todo.get_status_display }}</p>
-            </a>
-        </li>
-    {% empty %}    
-        <li>No hay tareas</li>
-    {% endfor %}
-    </ul>
+    <section class="todo-section">
+        {% if todos %}
+            <ul class="todo-list">
+                {% for todo in todos %}
+                    <a href="{% url 'todo_details' todo.id %}">
+                        <li class="todo-item">
+                            <p>{{ todo.title }}</p>
+                            <p>Estado: {{ todo.get_status_display }}</p>
+                        </li>
+                    </a>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay tareas</p>
+        {% endif %}
+    </section>
 
 {% endblock %}
