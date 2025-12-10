@@ -227,3 +227,7 @@ form {
 .cancel-button:hover {
     background-color: #ff0000;
 }
+
+.delete-button:hover {
+    background-color: #ff0000;
+}
