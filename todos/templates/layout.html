@@ -9,24 +9,26 @@
 </head>
 <body>
     <header>
-        <a class="home-button" href="{% url 'home' %}">
-            ToDo APP
-        </a>
-        <nav>
-            {% if not user.is_authenticated %}
-            <ul>
-                <li>
-                    <a class="login-button" href="{% url 'login' %}">Inciar Sesión</a>
-                </li>
-            </ul>
-            {% else %}
-            <ul>
-                <li>
-                    <a class="logout-button" href="{% url 'logout' %}">Cerrar Sesión</a>
-                </li>
-            </ul>
-            {% endif %}
-        </nav>
+        <div class="header-container">
+            <a class="home-button" href="{% url 'home' %}">
+                ToDo APP
+            </a>
+            <nav>
+                {% if not user.is_authenticated %}
+                <ul>
+                    <li>
+                        <a class="login-button" href="{% url 'login' %}">Inciar Sesión</a>
+                    </li>
+                </ul>
+                {% else %}
+                <ul>
+                    <li>
+                        <a class="logout-button" href="{% url 'logout' %}">Cerrar Sesión</a>
+                    </li>
+                </ul>
+                {% endif %}
+            </nav>
+        </div>
     </header>
 
     <section>
