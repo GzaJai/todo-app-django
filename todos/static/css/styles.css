@@ -1,17 +1,21 @@
+html {
+    overflow: hidden;
+}
+
 body {
     background-color: blanchedalmond;
     margin: 0;
     padding: 0;
+    overflow:hidden
 }
 
 header {
-    width: 100%;
+    width: 90dvw;
     background-color: tan;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: .5rem 1rem;
-
 }
 
 header .home-button {
@@ -22,7 +26,7 @@ header .home-button {
     text-decoration: none !important;
     color: inherit !important;
     background: none !important;
-    padding: 0 0 0 2rem !important;
+    padding: 0 !important;
 }
 
 nav {
@@ -36,6 +40,7 @@ nav li {
     font-weight: 500;
     color: black;
     font-size: 1rem;
+    white-space: nowrap;
 }
 
 .login-button {
@@ -88,7 +93,7 @@ section {
 }
 
 .todo-section {
-    width: 100%;
+    width: 90dvw;
     display: flex;
     justify-content: center;
 }
@@ -103,7 +108,13 @@ section {
     gap: 20px;
 
     width: 100%;
-    max-width: 600px;  /* evita que se estire demasiado */
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+    .todo-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 .todo-item {
