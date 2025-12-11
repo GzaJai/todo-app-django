@@ -10,13 +10,18 @@ body {
 }
 
 header {
-    width: 90dvw;
+    width: 100dvw;
     background-color: tan;
+}
+
+.header-container {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: .5rem 1rem;
 }
+
 
 header .home-button {
     width: 40%;
